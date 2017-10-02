@@ -1,0 +1,96 @@
+package kr.or.komca.smin;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
+
+import com.mysql.jdbc.PreparedStatement;
+
+@WebServlet("/DBCPTest")
+public class DBCPTest extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+	
+		response.setContentType("Text/html; charset=UTF-8");
+
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
+
+		Connection conn;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		String sql = "";
+		String result = "";
+		// int affectedCount = 0;
+
+		try {
+			Context initContext = new InitialContext();
+			Context envContext = (Context) initContext.lookup("java:/comp/env");
+			DataSource ds = (DataSource)envContext.lookup("jdbc/smdb_pool");
+			
+			conn = ds.getConnection();
+			
+			sql = "SELECT * FROM USERS";
+			pstmt
+			rs = stat.executeQuery(sql);
+
+			List<String> listName = new ArrayList<String>();
+			List<Integer> listIdx = new ArrayList<Integer>();
+			List<String> listId = new ArrayList<String>();
+			List<Integer> listLevel = new ArrayList<Integer>();
+
+			while (rs.next()) { // idx, id, name, level 값을 가져와 보기로 한다.
+
+				int idx = rs.getInt("idx");
+				String id = rs.getString("id");
+				String name = rs.getString("name");
+				int level = rs.getInt("level");
+
+				listName.add(name);
+				listIdx.add(idx);
+				listId.add(id);
+				listLevel.add(level);
+
+			} // while
+
+			request.setAttribute("listName", listName);
+			request.setAttribute("listIdx", listIdx);
+			request.setAttribute("listId", listId);
+			request.setAttribute("listLevel", listLevel);
+
+			int listSize = listName.size();
+			request.setAttribute("listSize", listSize);
+
+			conn.close();
+
+
+
+		// request.setAttribute("result", result);
+		// request.setAttribute("affectedCount", affectedCount);
+
+		RequestDispatcher rd = request.getRequestDispatcher("dbmsQueryTest.jsp");
+		rd.forward(request, response);
+	}
+
+}
+
+// protected void doPost(HttpServletRequest request, HttpServletResponse
+// response) throws ServletException, IOException {
+//
+// }

@@ -1,0 +1,75 @@
+
+/* comment */
+
+body { font-size:9pt; color:#333333; }  /* 9폰트 기준 */
+table { border-collapse:collapse; }
+/* td { text-align:center; } */
+
+a:link{ font-size:9pt; color:#333333; text-decoration:none }  
+/* ; text-decoration 을 none 으로 해놔야 마우스 오버시 색 초기화 */
+a:visited{ font-size:9pt; color:#333333; text-decoration:none }
+a:hover{ font-size:9pt; color:#000000; text-decoration:none }
+
+
+#display { width:90%; margin:auto; }
+/* ; 전체의 90% 마진: 여백 */
+
+
+
+.udline{ border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+.udlineCenter { text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+
+
+#bbslist .bbsOrderHead{ width:50px; height:35px; background-color:#DDDDDD; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+/* ; # 은 id 찾는 명령어 = bbslist 에 있는 bbsOrderHead를 찾아서 {}와 같이 수정 */
+
+#bbslist .bbsHeadHead{ width:50px; height:35px; background-color:#DDDDDD; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+
+#bbslist .bbsTitleHead{ width:250px; height:35px; background-color:#DDDDDD; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+/* ; solid 실선으로 그림 */
+#bbslist .bbsWriterHead{ width:100px; height:35px; background-color:#DDDDDD; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+#bbslist .bbsYmdHead{ width:100px; height:35px; background-color:#DDDDDD; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+#bbslist .bbsHmsHead{ width:100px; height:35px; background-color:#DDDDDD; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+#bbslist .bbsHitHead{ width:30px; height:35px; background-color:#DDDDDD; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+
+
+#bbslist .bbsOrder{ width:50px; height:30px; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+
+#bbslist .bbsHead{ width:50px; height:30px; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+
+#bbslist .bbsTitle{ width:250px; height:30px; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+#bbslist .bbsWriter{ width:100px; height:30px; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+#bbslist .bbsYmd{ width:100px; height:30px; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+#bbslist .bbsHms{ width:100px; height:30px; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+#bbslist .bbsHit{ width:100px; height:30px; text-align:center; border-top:1px solid #BBBBBB;	border-bottom:1px solid #BBBBBB;	border-left:0px solid #BBBBBB;	border-right:0px solid #BBBBBB; }
+
+
+#bbsview .left{ text-align:center; width:100px; height:30px; line-height:180%; }
+#bbsview .right{ text-align:left; width:500px; height:30px; line-height:180%; }
+#bbsview .headerRight{ text-align:right; height:30px; line-height:180%; }
+#bbsview .html{ text-align:left; height:300px; line-height:180%; }
+
+
+#bbsinput .left{ text-align:center; width:100px; height:30px; line-height:180%; }
+#bbsinput .right{ text-align:left; width:500px; height:30px; line-height:180%; }
+#bbsinput textarea{ width:90%; height:250px; line-height:180%; }
+/* .안붙이면 태그 */
+#bbsinput #title {width:90%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

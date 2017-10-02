@@ -31,4 +31,14 @@
     <!--
     <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
     -->
+    
+    <Resource name="jdbc/smdb_pool" auth="Container"
+    	type="javax.sql.DataSource"
+    	driverClassName="com.mysql.jdbc.Driver"
+    	url="jdbc:mysql://localhost/smdb?characterEncoding=UTF-8"
+    	username="smuser1"
+    	password="smpass"
+    	maxActive="5" maxIdle="3" maxWait="-1" />
+    
+    
 </Context>

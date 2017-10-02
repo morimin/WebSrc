@@ -1,0 +1,10 @@
+package snippet;
+
+public class Snippet {
+	insert into bbs(title, html, writer, ymd, hms) values ( '첫번째글', '첫번째 내용', '글쓴이1', now(), now()  );
+	> insert into bbs(title, html, writer, ymd, hms) values ( '두번째글', '두번째 내용', '글쓴이2', now(), now()  );
+	> insert into bbs(title, html, writer, ymd, hms) values ( '세번째글', '세번째 내용', '글쓴이3', now(), now()  );
+	> insert into bbs(title, html, writer, ymd, hms) values ( '네번째글', '네번째 내용', '글쓴이4', now(), now()  );
+	> insert into bbs(title, html, writer, ymd, hms) values ( '다섯번째글', '다섯번째 내용', '글쓴이5', now(), now()  );
+}
+

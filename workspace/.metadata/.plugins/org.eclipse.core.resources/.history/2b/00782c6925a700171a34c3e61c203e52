@@ -1,0 +1,51 @@
+package kr.or.komca.smin;
+
+import java.io.IOException;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+
+
+@WebServlet("/DbmsQueryTest")
+public class DbmsQueryTest extends HttpServlet {
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Statement stat = null;
+		ResultSet rs = null;
+		String sql = "";
+		Connection conn;
+		 
+		  try{
+		   Class.forName("com.mysql.jdbc.Driver");  // connector 복사해둔게 있어야 가능함.
+		   conn = DriverManager.getConnection( "jdbc:mysql://localhost:3306/smdb?characterEncoding=utf8" , "smuser1", "smpass" );
+		   
+		   if(conn != null)
+		   {
+		    stat = conn.createStatement();
+		    
+		    
+		    
+		    conn.close();
+		    //out.print("DB Close OK");
+		   }else
+		   {
+		    //out.print("DB Connect Error <br>");
+		   } 
+		   
+		   
+		  }catch(Exception e)
+		  {
+		   //out.print("Error : " + e.getMessage());
+		  }
+	}
+
+}
