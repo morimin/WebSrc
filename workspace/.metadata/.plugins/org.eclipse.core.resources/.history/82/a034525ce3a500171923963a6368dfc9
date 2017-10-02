@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Session Login</title>
+</head>
+<body>
+
+<!-- 포스트로 던지는데 서블릿이 아니라 JSP 로 던진다. -->
+
+<form method = post action ="SessionLogin">
+	
+	ID <input type="text" name="id"><br>
+	PW <input type="password" name="pass"><br><br>
+	<input type="submit" value="로그인"><br>
+
+</form>
+
+</body>
+</html>

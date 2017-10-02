@@ -1,0 +1,33 @@
+package kr.or.komca.smin;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/Upload")
+public class Upload extends HttpServlet {
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("Text/html; charset=UTF-8");
+		
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
+
+	
+		
+		request.setAttribute("myTotal", );
+		
+		RequestDispatcher rd = request.getRequestDispatcher("hundreds.jsp");
+		rd.forward(request, response);
+		
+		
+	}
+
+}

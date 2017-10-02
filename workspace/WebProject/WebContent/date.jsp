@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "java.util.GregorianCalendar" %>
+
+<!DOCTYPE >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Date JSP</title>
+</head>
+<body>
+
+	날짜 처리 import 과정<br><br>
+	
+<%
+	GregorianCalendar now = new GregorianCalendar();
+	
+	String day = String.format("%TF", now);
+	String time = String.format("%TT", now);
+
+%>	
+
+	현재 날짜 = <%= day %> <br>
+	현재 시간 = <%= time %> <br><br>
+	
+	<%@ include file = "includeForDate.jsp" %>
+
+
+</body>
+</html>

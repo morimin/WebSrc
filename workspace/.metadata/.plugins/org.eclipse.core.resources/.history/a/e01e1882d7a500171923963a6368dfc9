@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Forward Calculator</title>
+</head>
+<body>
+
+<%
+	String num1 = request.getParameter("num1");
+	String num2 = request.getParameter("num2");
+	
+	int op1 = Integer.parseInt(num1);
+	int op2 = Integer.parseInt(num2);
+
+	int add = op1 + op2 ;
+	int diff = op1 - op2 ;
+		
+%>
+
+<%= op1 %> + <%= op2 %> = <%= add %> <br>
+<%= op1 %> - <%= op2 %> = <%= diff %> <br>
+
+
+
+</body>
+</html>
